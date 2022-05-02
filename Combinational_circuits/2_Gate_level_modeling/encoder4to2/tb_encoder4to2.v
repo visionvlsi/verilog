@@ -2,7 +2,7 @@
 module encoder4to2_tb;
   reg y3,y2,y1,y0;
   wire a1,a0;
-   encoder4x2 ins1(y3,y2,y1,y0,a1,a0);
+   encoder4to2 ins1(y3,y2,y1,y0,a1,a0);
   initial
 begin
   $dumpfile("encoder4x2.vcd");
