@@ -3,7 +3,7 @@
 module tb_decoder2to4;
 reg a0, a1;
 wire d0, d1, d2, d3;
-decoder2to4  ins1(a0,a1,d0,d1,d2,d3);
+decoder2to4_df  ins1(a0,a1,d0,d1,d2,d3);
 initial begin
 $dumpfile("decoder2to4.vcd");
 $dumpvars(1);
