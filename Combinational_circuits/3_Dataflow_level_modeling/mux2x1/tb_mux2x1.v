@@ -2,7 +2,7 @@
 module tb_mux2x1;
   reg a,b,s;
   wire y;
-   mux2x1 ins1(a,b,s,y);
+   mux2x1_df ins1(a,b,s,y);
   initial
 begin
   $dumpfile("mux2x1.vcd");
