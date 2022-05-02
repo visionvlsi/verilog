@@ -2,7 +2,7 @@
 module tb_half_adder;
     reg a,b;
     wire sum,co;
-half_adder ha1(a,b,sum,co);
+half_adder_df ha1(a,b,sum,co);
   initial
     begin
       $dumpfile("ha.vcd");
