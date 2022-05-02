@@ -2,7 +2,7 @@
 module tb_andgate;
 reg a,b;
 wire y;
-andgate ins1(a,b,y);
+andgate_df ins1(a,b,y);
 initial
 begin
 $dumpfile("andgate.vcd");
