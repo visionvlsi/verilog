@@ -11,3 +11,25 @@ In C, all variables are automatic by default. In order to make them not automati
 A good practice is to declare your functions as automatic by default. The keyword automatic also allows you to write recursive functions, since now the simulator can dynamically allocate as many copies of the internal variables as it needs to unroll the recursion.</p>
 
 The example below demonstrates how recursion can be used in an automatic function.
+
+module function_auto ();
+ 
+  function automatic [7:0] factorial;
+    input [7:0] i_Num; 
+    begin
+      if (i_Num == 1)
+        factorial = 1; 
+      else
+        factorial = i_Num * factorial(i_Num-1);
+    end
+  endfunction
+ 
+  initial
+    begin
+      $display("Factorial of 1 = %d", factorial(1));
+      $display("Factorial of 2 = %d", factorial(2));
+      $display("Factorial of 3 = %d", factorial(3));
+      $display("Factorial of 4 = %d", factorial(4));
+      $display("Factorial of 5 = %d", factorial(5));
+    end
+endmodule
