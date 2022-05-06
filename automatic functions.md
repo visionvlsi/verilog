@@ -12,24 +12,26 @@ A good practice is to declare your functions as automatic by default. The keywor
 
 The example below demonstrates how recursion can be used in an automatic function.
 
-module function_auto ();
+<ol>
+ <li>module function_auto ();</li>
  
-  function automatic [7:0] factorial;
-    input [7:0] i_Num; 
-    begin
-      if (i_Num == 1)
-        factorial = 1; 
-      else
-        factorial = i_Num * factorial(i_Num-1);
-    end
-  endfunction
+  <li>function automatic [7:0] factorial;</li>
+    <li>input [7:0] i_Num;</li> 
+    <li>begin</li>
+      <li>if (i_Num == 1)</li>
+        <li>factorial = 1;</li> 
+      <li>else</li>
+        <li>factorial = i_Num * factorial(i_Num-1);</li>
+    <li>end</li>
+  <li>endfunction</li>
  
-  initial
-    begin
-      $display("Factorial of 1 = %d", factorial(1));
-      $display("Factorial of 2 = %d", factorial(2));
-      $display("Factorial of 3 = %d", factorial(3));
-      $display("Factorial of 4 = %d", factorial(4));
-      $display("Factorial of 5 = %d", factorial(5));
-    end
-endmodule
+  <li>initial</li>
+    <li>begin</li>
+      <li>$display("Factorial of 1 = %d", factorial(1));</li>
+      <li>$display("Factorial of 2 = %d", factorial(2));</li>
+      <li>$display("Factorial of 3 = %d", factorial(3));</li>
+      <li>$display("Factorial of 4 = %d", factorial(4));</li>
+      <li>$display("Factorial of 5 = %d", factorial(5));</li>
+    <li>end</li>
+<li>endmodule</li>
+</ol>
