@@ -8,5 +8,6 @@ as opposed to being shared between all calls of the function. This could be a pr
 at the same time. Race conditions can develop.
 
 In C, all variables are automatic by default. In order to make them not automatic, they must be declared as static. Verilog is the opposite with functions. All functions are static by default and should be declared automatic if they are called simultaneously.
-A good practice is to declare your functions as automatic by default. The keyword automatic also allows you to write recursive functions, since now the simulator can dynamically allocate as many copies of the internal variables as it needs to unroll the recursion. 
-The example below demonstrates how recursion can be used in an automatic function.</p>
+A good practice is to declare your functions as automatic by default. The keyword automatic also allows you to write recursive functions, since now the simulator can dynamically allocate as many copies of the internal variables as it needs to unroll the recursion.</p>
+
+The example below demonstrates how recursion can be used in an automatic function.
